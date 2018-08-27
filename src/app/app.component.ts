@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingService, LoadingConfiguracoes } from './servicos/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularCLI';
+
+  constructor(public carregando: LoadingService) {
+
+    let config :LoadingConfiguracoes = {
+        mostrarLoading: true
+      };
+  
+      carregando.configure(config);
+  }
 }
