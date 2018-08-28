@@ -8,7 +8,7 @@ export interface LoadingConfiguracoes {
 })
 export class LoadingService {
 
-  mostrarModal = true;
+  mostrarLoading = true;
 
   configure(settings: LoadingConfiguracoes) :  void {
     Object.assign(this, settings);

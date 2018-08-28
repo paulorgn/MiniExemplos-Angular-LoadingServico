@@ -12,9 +12,15 @@ export class AppComponent {
   constructor(public carregando: LoadingService) {
 
     let config :LoadingConfiguracoes = {
-        mostrarLoading: true
+      mostrarLoading: true
       };
   
       carregando.configure(config);
+
+      this.SimulandoProcessamento();
+  }
+
+  SimulandoProcessamento(){
+    setTimeout(() => this.carregando.mostrarLoading = false, 5000);
   }
 }
